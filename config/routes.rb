@@ -10,13 +10,13 @@ Rails.application.routes.draw do
   end
 
   resources :lists, only: [] do
-    resources :items, only: [:create]
+    resources :items
   end
 
-  resources :items, only: [:destroy]
+  # resources :items, only: [:update, :destroy]
 
 
-  get 'user/new'
+  # get 'user/new'
 
   root 'welcome#index'
 
